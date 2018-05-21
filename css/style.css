@@ -57,6 +57,10 @@ input[type="radio"].visually-hidden {
 
 /* === HEADER === */
 
+header {
+  background-color: #f3f7f9;
+}
+
 .header-top {
   background-color: #293449;
 }
@@ -115,6 +119,27 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
+}
+
+.user-navigation-current {
+  background-color: #ee3643;
+}
+
+.checkout {
+  background-color: #63a63e;
+}
+
+.checkout:hover,
+.checkout:focus {
+  background-color: #5fbb2d;
+}
+
+.checkout:active {
+  background-color: #518534;
+}
+
+.checkout:active a {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .header-bottom {
@@ -676,4 +701,236 @@ input[type="radio"].visually-hidden {
 
 .contact-email a {
   color: #ffd180;
+}
+
+/* ====== CATALOG PAGE ====== */
+
+/* === HEADER === */
+
+.header-login input {
+  background-color: #ffffff;
+
+  color: #000000;
+  font: inherit;
+  font-size: 21px;
+  line-height: 21px;
+
+  border: none;
+}
+
+.header-login input::placeholder {
+  color: #000000;
+  font: inherit;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.authorized-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.authorized-list a {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+
+  text-decoration: underline;
+}
+
+/* === MAIN === */
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumb li {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.inner-heading {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+
+  background-color: #f2f6f8;
+}
+
+/* === FILTER === */
+
+.filter h2 {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+}
+
+.filter-form fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-form .filter-charging {
+  border-bottom: none;
+}
+
+.filter-form legend {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-manufactur-list,
+.filter-charging-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter-manufactur-list label,
+.filter-charging-list label{
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter-button {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  border-color: #bdc6ca;
+}
+
+.filter-button:active {
+  border-color: #ee3643;
+}
+
+/* === CATALOG === */
+
+.sort {
+  background-color: #f7f3ec;
+}
+
+.sort h2 {
+  margin-left: 0;
+
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort-by-category,
+.sort-by-priority {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sort-by-category a,
+.sort-by-priority a {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sort-item-current a {
+  color: #ee3643;
+
+  border-bottom: none;
+}
+
+.pagination-list {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.pagination-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.pagination-item a {
+  color: #000000;
+}
+
+.pagination-item:hover,
+.pagination-item:focus {
+  border-color: #bdc6ca;
+}
+
+.pagination-item:active {
+  border-color: #ee3643;
+}
+
+.pagination-item-current {
+  background-color: #ee3643;
+}
+
+.pagination-item-current a {
+  color: #ffffff;
+}
+
+/* === CATALOG INFO === */
+
+.catalog-info {
+  background-color: #f2f6f8;
+}
+
+.catalog-info h2 {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog-info p {
+  margin: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
