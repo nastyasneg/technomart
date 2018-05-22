@@ -39,6 +39,11 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
 .button {
   background-color: #ee3643;
   border-radius: 2px;
@@ -62,7 +67,16 @@ header {
 }
 
 .header-top {
+  min-height: 42px;
+
   background-color: #293449;
+}
+
+.header-top .container {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header-top a {
@@ -71,13 +85,72 @@ header {
   color: #ffffff;
 }
 
+.user-navigation {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.user-navigation li {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.user-navigation li:hover,
+.user-navigation li:focus {
+  background-color: #212a3a;
+}
+
+.user-navigation li:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #161d29;
+}
+
+.user-navigation a:active {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.user-navigation .bookmark,
+.user-navigation .cart {
+  padding-left: 45px;
+}
+
+.user-navigation .checkout {
+  text-align: center;
+}
+
 .user-navigation input {
+  width: 270px;
+  height: 42px;
+  padding: 10px 20px 12px 50px;
+  box-sizing: border-box;
+
   font: inherit;
   font-size: 17px;
   line-height: 18px;
 
   background-color: transparent;
+  background-image: url(../img/icon/search-grey.svg);
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
   border: none;
+  outline: none;
+}
+
+.user-navigation input:hover {
+  background-color: #212a3a;
+  background-image: url(../img/icon/search.svg);
+}
+
+.user-navigation input:focus {
+  background-color: #ffffff;
+  background-image: url(../img/icon/search-red.svg);
 }
 
 .user-navigation input::placeholder {
@@ -87,11 +160,74 @@ header {
   color: #ffffff;
 }
 
+.user-navigation-current {
+  background-color: #ee3643;
+}
+
+.user-navigation .bookmark {
+  background-image: url(../img/icon/bookmark.svg);
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+.user-navigation .bookmark:hover,
+.user-navigation .bookmark:focus {
+  background-image: url(../img/icon/bookmark-white.svg);
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+.user-navigation .bookmark:active {
+  background-image: url(../img/icon/bookmark-active.svg);
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+.user-navigation .cart {
+  background-image: url(../img/icon/cart.svg);
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+.user-navigation .cart:hover,
+.user-navigation .cart:focus {
+  background-image: url(../img/icon/cart-hover.svg);
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+.user-navigation .cart:active {
+  background-image: url(../img/icon/cart-active.svg);
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+
+.user-navigation .checkout {
+  background-color: #63a63e;
+}
+
+.user-navigation .checkout:hover,
+.user-navigation .checkout:focus {
+  background-color: #5fbb2d;
+}
+
+.user-navigation .checkout:active {
+  background-color: #518534;
+}
+
+.user-navigation .checkout:active a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .main-header-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: flex;
   justify-content: center;
   width: 220px;
-  height: 45px;
+  height: 47px;
   padding-top: 10px;
   box-sizing: border-box;
 
@@ -114,36 +250,13 @@ header {
   text-transform: uppercase;
 }
 
-.user-navigation {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.user-navigation-current {
-  background-color: #ee3643;
-}
-
-.checkout {
-  background-color: #63a63e;
-}
-
-.checkout:hover,
-.checkout:focus {
-  background-color: #5fbb2d;
-}
-
-.checkout:active {
-  background-color: #518534;
-}
-
-.checkout:active a {
-  color: rgba(255, 255, 255, 0.5);
-}
-
 .header-bottom {
   background-color: #f4f7f9;
+}
+
+.header-middle-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-bottom p {
@@ -151,6 +264,9 @@ header {
 }
 
 .header-description {
+  width: 300px;
+  padding-left: 50px;
+
   font-style: italic;
   color: #ee3643;
   font-size: 16px;
@@ -186,6 +302,9 @@ header {
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
+
   margin: 0;
   padding-left: 0;
 
@@ -208,6 +327,11 @@ header {
   padding: 0;
 
   list-style: none;
+}
+
+.promo-goods {
+  display: flex;
+  justify-content: space-between;
 }
 
 .promo-goods li,
@@ -248,6 +372,11 @@ header {
 
 .promo-goods li:last-child {
   background-color: #dc91d8;
+}
+
+.promo-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .promo-advantage li:first-child {
@@ -301,6 +430,9 @@ header {
 /* === POPULAR GOODS === */
 
 .goods-heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+
   background-color: #f9f5f0;
 }
 
@@ -321,6 +453,10 @@ header {
 }
 
 .catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
@@ -389,7 +525,6 @@ header {
   transform: rotate(-45deg);
 }
 
-
 .catalog-item-hover {
   margin: 0;
 
@@ -445,6 +580,9 @@ header {
 /* === POPULAR MANUFACTURER === */
 
 .manufacturer-heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+
   background-color: #f9f5f0;
 }
 
@@ -465,6 +603,10 @@ header {
 }
 
 .manufacturer-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
@@ -496,6 +638,10 @@ header {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.services-wrapper {
+  display: flex;
 }
 
 .services-slider-toggle {
@@ -572,6 +718,10 @@ header {
 
 /* === INFO === */
 
+.info {
+  display: flex;
+}
+
 .info h2 {
   margin: 0;
 
@@ -634,6 +784,10 @@ header {
   background-color: #32425c;
 }
 
+.footer-navigation .container {
+  display: flex;
+}
+
 .footer-logo {
   display: flex;
   justify-content: center;
@@ -658,6 +812,9 @@ header {
 }
 
 .footer-site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
@@ -674,6 +831,10 @@ header {
 
 .footer-bottom {
   background-color: #293449;
+}
+
+.footer-bottom .container {
+  display: flex;
 }
 
 .copyright {
