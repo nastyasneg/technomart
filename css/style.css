@@ -257,6 +257,8 @@ header {
 .header-middle-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 158px;
 }
 
 .header-bottom p {
@@ -273,32 +275,100 @@ header {
   line-height: 23px;
 }
 
+.header-middle-row .header-contacts {
+  margin-right: 70px;
+}
+
 .header-contacts-tel {
   display: block;
+  width: 270px;
+  padding: 10px 15px;
+  box-sizing: border-box;
 
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
+  text-align: center;
+
+  background-image: url(../img/icon/phone.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 11px;
+  border: 3px solid #ffffff;
 }
 
 .header-contacts-address {
+  display: block;
 
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
+  text-align: center;
 }
 
 .header-login {
+  display: flex;
+  align-items: center;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.header-login li {
+  min-height: 45px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.header-login li:first-child {
+  width: 121px;
+  margin-right: 10px;
+
+  background-image: url(../img/icon/login-grey.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+}
+
+.header-login li:first-child:hover {
+  background-image: url(../img/icon/login.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+}
+
+.header-login li:first-child:active {
+  background-image: url(../img/icon/login-grey.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+}
+
+.header-login li:nth-child(2) {
+  width: 150px;
+}
+
 .header-login a {
+  display: block;
+  padding: 12px 15px;
+
   color: #000000;
   font-size: 21px;
   line-height: 21px;
+}
+
+.enter a {
+  padding-left: 48px;
+}
+
+.header-login a:hover,
+.header-login a:focus {
+  color: #ee3643;
+}
+
+.header-login a:active {
+  color: #c5c5c5;
 }
 
 .site-navigation {
@@ -306,16 +376,39 @@ header {
   justify-content: space-between;
 
   margin: 0;
-  padding-left: 0;
+  padding: 0;
 
   list-style: none;
   background-color: #32425c;
+  border-bottom: 5px solid #293449;
 }
 
 .site-navigation a {
+  display: block;
+  padding: 20px 30px;
+
   color: #ffffff;
   font-size: 17px;
   line-height: 17px;
+}
+
+.site-nav-option:first-child a {
+  padding-left: 50px;
+}
+
+.site-nav-option:last-child a {
+  padding-right: 50px;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background-color: #293449;
+}
+
+.site-navigation a:active {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #1d2739;
 }
 
 /* === PROMO === */
