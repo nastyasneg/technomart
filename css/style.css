@@ -63,6 +63,9 @@ input[type="radio"].visually-hidden {
 /* === HEADER === */
 
 header {
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+
   background-color: #f3f7f9;
 }
 
@@ -413,6 +416,10 @@ header {
 
 /* === PROMO === */
 
+.promo {
+  margin-bottom: 53px;
+}
+
 .promo-goods,
 .promo-slider,
 .promo-advantage {
@@ -425,6 +432,13 @@ header {
 .promo-goods {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.promo-item,
+.promo-advantage-item {
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .promo-goods li,
@@ -435,6 +449,7 @@ header {
 .promo-item h3,
 .promo-advantage-item h3 {
   margin: 0;
+  margin-bottom: 10px;
 
   color: #ffffff;
   font-size: 24px;
@@ -444,27 +459,51 @@ header {
 
 .promo-item a,
 .promo-advantage-item a {
-  display: block;
-  width: 135px;
-
   color: #ffffff;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
+}
+
+.promo-button {
+  display: block;
+  width: 135px;
+  padding: 12px 20px;
+  box-sizing: border-box;
 
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.promo-button:hover,
+.promo-button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.promo-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .promo-goods li:first-child {
   background-color: #ffbf47;
+  background-image: url(../img/icon/popular-item1.svg);
+  background-repeat: no-repeat;
+  background-position: 210px 30px;
 }
 
 .promo-goods li:nth-child(2) {
   background-color: #3bbce3;
+  background-image: url(../img/icon/popular-item2.svg);
+  background-repeat: no-repeat;
+  background-position: 200px 30px;
 }
 
 .promo-goods li:last-child {
   background-color: #dc91d8;
+  background-image: url(../img/icon/popular-item3.svg);
+  background-repeat: no-repeat;
+  background-position: 190px 30px;
 }
 
 .promo-wrapper {
@@ -473,16 +512,61 @@ header {
 }
 
 .promo-advantage li:first-child {
+  margin-bottom: 20px;
+
   background-color: #8ed78f;
+  background-image: url(../img/icon/popular-item4.svg);
+  background-repeat: no-repeat;
+  background-position: 195px 25px;
 }
 
 .promo-advantage li:last-child {
   background-color: #ffc047;
+  background-image: url(../img/icon/popular-item5.svg);
+  background-repeat: no-repeat;
+  background-position: 190px 30px;
+}
+
+.item-new {
+  position: relative;
+}
+
+.item-new::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 60px;
+
+  background-image: url(../img/icon/new-flag.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.promo-slider {
+  position: relative;
+  width: 620px;
+  height: 265px;
 }
 
 .promo-slide {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 25px;
+  box-sizing: border-box;
+
   width: 620px;
   height: 265px;
+}
+
+.promo-slide-top {
+  z-index: 1;
 }
 
 .promo-slide h3 {
@@ -495,6 +579,8 @@ header {
 }
 
 .promo-slide p {
+  margin: 0;
+
   color: #ffffff;
   line-height: 24px;
 }
@@ -503,7 +589,16 @@ header {
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
+}
+
+.promo-slide .button {
+  display: block;
+  width: 195px;
+  padding: 12px 35px;
+  margin-top: auto;
+  box-sizing: border-box;
 }
 
 .promo-slider li:first-child {
@@ -518,6 +613,34 @@ header {
   background-image: url(../img/items-slide2.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.promo-slider-toggle .slider-toggle {
+  position: absolute;
+  z-index: 2;
+
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+}
+
+.slider-toggle-left {
+  top: 115px;
+  left: 25px;
+
+  transform: rotate(45deg);
+}
+
+.slider-toggle-right {
+  top: 115px;
+  right: 25px;
+
+  transform: rotate(-135deg);
 }
 
 /* === POPULAR GOODS === */
