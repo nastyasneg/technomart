@@ -861,6 +861,9 @@ header {
 }
 
 /* === POPULAR MANUFACTURER === */
+.popular-manufacturer {
+  margin-bottom: 65px;
+}
 
 .manufacturer-heading-wrapper {
   display: flex;
@@ -929,11 +932,14 @@ header {
 /* === SERVICES === */
 
 .services {
+  padding-top: 65px;
+
   background-color: #f5f8fa;
 }
 
 .services h2 {
   margin: 0;
+  margin-bottom: 30px;
 
   font-size: 30px;
   line-height: 30px;
@@ -941,6 +947,10 @@ header {
 }
 
 .services p {
+  margin: 0;
+  margin-bottom: 75px;
+  width: 400px;
+
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -997,6 +1007,7 @@ header {
 .services-slider {
   margin: 0;
   padding: 0;
+  padding-left: 80px;
   width: 700px;
 
   list-style: none;
@@ -1004,6 +1015,7 @@ header {
 
 .services-slider h3 {
   margin: 0;
+  margin-bottom: 30px;
 
   font-size: 36px;
   line-height: 36px;
@@ -1011,25 +1023,75 @@ header {
   text-transform: uppercase;
 }
 
+.services-item {
+  display: none;
+  width: 700px;
+  padding-bottom: 105px;
+  min-height: 285px;
+  box-sizing: border-box;
+}
+
+.services-item-show {
+  display: block;
+}
+
+.services-item:first-child {
+  background-image: url(../img/services-slide1.png);
+  background-repeat: no-repeat;
+  background-position: right 25px;
+}
+
+.services-item:nth-child(2) {
+  background-image: url(../img/services-slide2.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+
+.services-item:last-child {
+  background-image: url(../img/services-slide3.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+
 .services-slider p {
   margin: 0;
+  margin-bottom: 30px;
+  width: 380px;
 }
 
 .services-slider a {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 14px;
+  text-align: center;
   line-height: 18px;
+}
+
+.services-item .button {
+  display: block;
+  padding: 10px 20px;
+  width: 195px;
+  box-sizing: border-box;
+
+  border-radius: 2px;
 }
 
 /* === INFO === */
 
 .info {
   display: flex;
+  padding-top: 80px;
+  padding-bottom: 87px;
+}
+
+.info-right-column {
+  margin-left: auto;
+  width: 300px;
 }
 
 .info h2 {
   margin: 0;
+  margin-bottom: 30px;
 
   font-size: 30px;
   line-height: 30px;
@@ -1038,10 +1100,20 @@ header {
 
 .info p {
   margin: 0;
+  width: 540px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.info .info-transport-company {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.info .info-contacts {
+  margin-bottom: 35px;
 }
 
 .info a {
@@ -1053,6 +1125,7 @@ header {
 
 .transport-company {
   margin: 0;
+  margin-bottom: 35px;
   padding: 0;
 
   list-style: none;
@@ -1084,9 +1157,35 @@ header {
   background-color: #fb565a;
 }
 
+.info-right-column img {
+  margin-bottom: 40px;
+}
+
+.info-left-column .button {
+  display: block;
+  width: 220px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  text-align: center;
+}
+
+.info-right-column .button {
+  display: block;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  text-align: center;
+}
+
 /* === FOOTER === */
 
 .footer-navigation {
+  padding-bottom: 40px;
+
   background-color: #32425c;
 }
 
@@ -1099,6 +1198,7 @@ header {
   justify-content: center;
   width: 220px;
   height: 68px;
+  margin-bottom: 30px;
   padding-top: 17px;
   box-sizing: border-box;
 
@@ -1113,22 +1213,58 @@ header {
 
 .footer-navigation p {
   margin: 0;
+  width: 340px;
 
   color: #ffffff;
 }
 
 .footer-site-navigation {
-  display: flex;
-  flex-wrap: wrap;
+  margin-left: auto;
+}
 
+.footer-site-navigation .top-navigation,
+.footer-site-navigation .bottom-navigation {
+  display: flex;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
+  width: 550px;
 
   list-style: none;
 }
 
+.footer-site-navigation .top-navigation {
+  margin-top: 39px;
+  margin-bottom: 40px;
+}
+
+.footer-site-navigation .bottom-navigation {
+  margin-bottom: 40px;
+}
+
+.top-navigation li,
+.bottom-navigation li {
+  margin-left: 60px;
+}
+
+.top-navigation li:first-child,
+.bottom-navigation li:first-child {
+  margin-left: 0;
+}
+
 .footer-site-navigation a {
   color: #ffffff;
+}
+
+.footer-site-navigation a:hover,
+.footer-site-navigation a:focus {
+  text-decoration: underline;
+}
+
+.footer-site-navigation a:active {
+  text-decoration: none;
+
+  opacity: 0.5;
 }
 
 .footer-bottom-navigation a {
@@ -1136,6 +1272,8 @@ header {
 }
 
 .footer-bottom {
+  padding: 35px 0;
+
   background-color: #293449;
 }
 
@@ -1145,6 +1283,8 @@ header {
 
 .copyright {
   margin: 0;
+  margin-right: 150px;
+  width: 240px;
 
   color: #ffffff;
   font-size: 16px;
@@ -1152,22 +1292,82 @@ header {
 }
 
 .footer-social {
+  display: flex;
   margin: 0;
+  margin-right: 120px;
   padding: 0;
 
   list-style: none;
 }
 
-.contact-email {
+.social-button a {
+  display: block;
+
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+
+  background-color: #212a3a;
+  border-radius: 50%;
+}
+
+.social-button a:hover,
+.social-focus a:hover,
+.social-active a:hover {
+  background-color: #ee3643;
+}
+
+.social-button:first-child a {
+  background-image: url(../img/icon/vk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-button:nth-child(2) a {
+  background-image: url(../img/icon/fb.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-button:last-child a {
+  margin-right: 0;
+
+  background-image: url(../img/icon/insta.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-email,
+.contact-made {
   margin: 0;
+  width: 140px;
 
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
 }
 
-.contact-email a {
+.contact-email a,
+.contact-made a {
   color: #ffd180;
+}
+
+.contact-email a:hover,
+.contact-made a:hover {
+  text-decoration: underline;
+}
+
+.contact-email a:active,
+.contact-made a:active,
+.contact-email a:focus,
+.contact-made a:focus {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+.contact-email {
+  margin-right: 20px;
 }
 
 /* ====== CATALOG PAGE ====== */
