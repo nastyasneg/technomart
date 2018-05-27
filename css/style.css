@@ -999,9 +999,21 @@ header {
 }
 
 .toggle-item-current {
+  width: 240px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+
+  font-size: 21px;
+  line-height: 30px;
   color: #32425c;
+  font-weight: bold;
 
   background-color: #ffffff;
+  border-bottom: 1px solid #4d637b;
+}
+
+.toggle-item:hover {
+  background-color: #293449;
 }
 
 .services-slider {
