@@ -1594,6 +1594,7 @@ header {
   text-transform: uppercase;
 
   background-color: #f7f3ec;
+  border-radius: 2px;
 }
 
 .filter-form fieldset {
@@ -1834,6 +1835,10 @@ header {
 }
 
 .filter-button {
+  width: 140px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1860,11 +1865,19 @@ header {
 }
 
 .sort {
+  display: flex;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
   background-color: #f7f3ec;
+  border-radius: 2px;
 }
 
 .sort h2 {
   margin: 0;
+  margin-right: 100px;
+  padding-left: 20px;
+  width: 120px;
 
   font-size: 13px;
   line-height: 18px;
@@ -1873,14 +1886,19 @@ header {
 
 .sort-by-category,
 .sort-by-priority {
+  display: flex;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.sort-by-category a,
-.sort-by-priority a {
+.sort-by-priority {
+  margin-left: auto;
+}
+
+.sort-by-category a {
   color: rgba(0, 0, 0, 0.3);
   font-size: 13px;
   line-height: 18px;
@@ -1889,10 +1907,43 @@ header {
   border-bottom: 1px dotted #ee3643;
 }
 
+.sort-by-category a:hover,
+.sort-by-category a:focus {
+  color: #000000;
+
+  border-bottom: 1px solid #ee3643;
+}
+
+.sort-by-category a:active {
+  color: #ee3643;
+
+  border: none;
+}
+
+.sort-by-category li {
+  width: 120px;
+}
+
 .sort-item-current a {
   color: #ee3643;
 
   border-bottom: none;
+}
+
+.sort-by-priority li {
+  margin-right: 20px;
+
+  cursor: pointer;
+}
+
+.sort-by-priority li:hover polyline,
+.sort-by-priority li:focus polyline {
+  fill: #000000;
+}
+
+.sort-by-priority .sort-item-current polyline,
+.sort-by-priority .sort-item-current:hover polyline {
+  fill: #ee3643;
 }
 
 .pagination-list {
