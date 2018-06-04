@@ -2036,11 +2036,15 @@ header {
 /* === CATALOG INFO === */
 
 .catalog-info {
+  padding-top: 60px;
+  padding-bottom: 70px;
+
   background-color: #f2f6f8;
 }
 
 .catalog-info h2 {
   margin: 0;
+  margin-bottom: 30px;
 
   font-size: 30px;
   line-height: 30px;
