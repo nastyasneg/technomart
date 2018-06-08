@@ -666,8 +666,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 27px;
+  margin-bottom: 17px;
 
   background-color: #f9f5f0;
 }
@@ -691,7 +691,7 @@ header {
 }
 
 .goods-heading-wrapper .button {
-  width: 253px;
+  width: 250px;
   padding: 10px 20px;
   box-sizing: border-box;
 }
@@ -723,6 +723,7 @@ header {
 
 .catalog-item h3 {
   margin: 0 auto;
+  margin-top: 5px;
   margin-bottom: 10px;
   width: 160px;
 
@@ -759,9 +760,10 @@ header {
   position: relative;
 
   width: 120px;
-  margin: auto;
+  margin-left: 43px;
   margin-bottom: 20px;
   padding: 10px;
+  padding-left: 20px;
   box-sizing: border-box;
 
   color: #ffffff;
@@ -893,8 +895,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 27px 25px;
+  margin-bottom: 17px;
 
   background-color: #f9f5f0;
 }
@@ -964,7 +966,7 @@ header {
 
 .services h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   font-size: 30px;
   line-height: 30px;
@@ -974,7 +976,7 @@ header {
 
 .services p {
   margin: 0;
-  margin-bottom: 75px;
+  margin-bottom: 67px;
   width: 400px;
 
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1053,7 +1055,7 @@ header {
 
 .services-slider h3 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   font-size: 36px;
   line-height: 36px;
@@ -1065,7 +1067,7 @@ header {
 .services-item {
   display: none;
   width: 700px;
-  padding-bottom: 105px;
+  padding-bottom: 100px;
   min-height: 285px;
   box-sizing: border-box;
 }
@@ -1077,25 +1079,25 @@ header {
 .services-item:first-child {
   background-image: url(../img/services-slide1.png);
   background-repeat: no-repeat;
-  background-position: right 25px;
+  background-position: 150px 25px;
 }
 
 .services-item:nth-child(2) {
   background-image: url(../img/services-slide2.png);
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: 220px 0;
 }
 
 .services-item:last-child {
   background-image: url(../img/services-slide3.png);
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: 150px 0;
 }
 
 .services-slider p {
   margin: 0;
   margin-bottom: 30px;
-  width: 380px;
+  width: 275px;
 }
 
 .services-slider a {
@@ -1119,7 +1121,7 @@ header {
 
 .info {
   display: flex;
-  padding-top: 80px;
+  padding-top: 77px;
   padding-bottom: 87px;
 }
 
@@ -1130,7 +1132,7 @@ header {
 
 .info h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   font-size: 30px;
   line-height: 30px;
@@ -1151,8 +1153,8 @@ header {
 }
 
 .info .info-transport-company {
-  margin-top: 30px;
-  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .info .info-contacts {
@@ -1206,7 +1208,7 @@ header {
   position: relative;
 
   width: 300px;
-  height: 198px;
+  height: 193px;
 }
 
 .info-right-column iframe {
@@ -1245,7 +1247,7 @@ header {
 /* === FOOTER === */
 
 .footer-navigation {
-  padding-bottom: 40px;
+  padding-bottom: 35px;
 
   background-color: #32425c;
 }
@@ -1406,7 +1408,6 @@ header {
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
-  text-align: center;
 }
 
 .contact-email a,
@@ -1428,7 +1429,11 @@ header {
 }
 
 .contact-email {
-  margin-right: 20px;
+  margin-right: 50px;
+}
+
+.contact-made {
+  width: 98px;
 }
 
 /* ====== CATALOG PAGE ====== */
