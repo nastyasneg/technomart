@@ -90,6 +90,7 @@ header {
 
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -132,6 +133,7 @@ header {
   width: 270px;
   height: 42px;
   padding: 10px 20px 12px 50px;
+  margin-left: 220px;
   box-sizing: border-box;
 
   font: inherit;
@@ -274,13 +276,15 @@ header {
   box-sizing: border-box;
 }
 
-.header-bottom p {
+.header-contacts {
   margin: 0;
 }
 
 .header-description {
   width: 300px;
   padding-left: 50px;
+  margin: 0;
+  margin-bottom: 43px;
   box-sizing: border-box;
 
   font-style: italic;
@@ -390,7 +394,7 @@ header {
 
 .site-navigation {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
   margin: 0;
   padding: 0;
@@ -402,7 +406,7 @@ header {
 
 .site-navigation a {
   display: block;
-  padding: 20px 30px 17px 30px;
+  padding: 20px 31px 17px 31px;
 
   color: #ffffff;
   font-size: 17px;
@@ -464,6 +468,8 @@ header {
 .promo-advantage-item h3 {
   margin: 0;
   margin-bottom: 12px;
+  width: 140px;
+  word-break: break-all;
 
   color: #ffffff;
   font-size: 24px;
@@ -674,6 +680,7 @@ header {
 
 .goods-heading-wrapper h2 {
   margin: 0;
+  width: 600px;
 
   font-size: 30px;
   line-height: 30px;
@@ -701,7 +708,6 @@ header {
   flex-wrap: wrap;
   width: 940px;
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
 
   list-style: none;
@@ -712,12 +718,13 @@ header {
 
   width: 220px;
   margin-right: 20px;
+  margin-bottom: 20px;
   box-sizing: border-box;
 
   border: 1px solid #eaeaea;
 }
 
-.index-catalog-list .catalog-item:last-child {
+.index-catalog-list .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -887,6 +894,7 @@ header {
 }
 
 /* === POPULAR MANUFACTURER === */
+
 .popular-manufacturer {
   margin-bottom: 65px;
 }
@@ -903,6 +911,7 @@ header {
 
 .popular-manufacturer h2 {
   margin: 0;
+  width: 600px;
 
   font-size: 30px;
   line-height: 30px;
@@ -927,7 +936,6 @@ header {
 
 .manufacturer-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   margin: 0;
@@ -940,8 +948,13 @@ header {
   width: 220px;
   height: 145px;
   margin-bottom: 20px;
+  margin-right: 20px;
 
-  border: 1px solid #eaeaea;
+  outline: 1px solid #eaeaea;
+}
+
+.manufacturer-list li:nth-child(4n) {
+  margin-right: 0;
 }
 
 .manufacturer-item:hover {
@@ -1133,11 +1146,13 @@ header {
 .info h2 {
   margin: 0;
   margin-bottom: 27px;
+  width: 315px;
 
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   font-weight: 400;
+  word-break: break-all;
 }
 
 .info p {
@@ -1289,25 +1304,27 @@ header {
 .footer-site-navigation .bottom-navigation {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 550px;
+  width: 560px;
 
   list-style: none;
 }
 
 .footer-site-navigation .top-navigation {
   margin-top: 39px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .footer-site-navigation .bottom-navigation {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .top-navigation li,
 .bottom-navigation li {
   margin-left: 60px;
+  margin-bottom: 40px;
 }
 
 .top-navigation li:first-child,
@@ -1448,9 +1465,9 @@ header {
   margin-left: auto;
 }
 
-.header-login-inner input {
+.header-login-inner .authorized-user {
   width: 300px;
-  padding: 10px 48px;
+  padding: 11px 48px;
   box-sizing: border-box;
 
   color: #000000;
@@ -1465,25 +1482,16 @@ header {
   background-position: 13px center, 270px center;
 }
 
-.header-login-inner input::placeholder {
-  color: #000000;
-  font: inherit;
-  font-size: 21px;
-  line-height: 21px;
-}
-
-.header-login-inner input:focus::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.header-login-inner input:hover,
-.header-login-inner input:focus {
+.header-login-inner .authorized-user:hover,
+.header-login-inner .authorized-user:focus {
   background-image: url(../img/icon/user.svg), url(../img/icon/logout.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: 13px center, 270px center;
 }
 
-.header-login-inner input:focus {
+.header-login-inner .authorized-user:active {
+  color: rgba(0, 0, 0, 0.3);
+
   background-image: url(../img/icon/user-grey.svg), url(../img/icon/logout-grey.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: 13px center, 270px center;
