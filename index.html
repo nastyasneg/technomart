@@ -295,7 +295,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036390487786!2d30.320073859260223!3d59.93871894093505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1528297818045" allowfullscreen></iframe>
             <img src="img/map.jpg" alt="Офис Техномарт на карте" width="300" height="158">
           </p>
-          <a class="button" href="#">Заблудились? Напишите нам!</a>
+          <a class="button feedback-link" href="#">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </main>
@@ -379,7 +379,7 @@
 
     <section class="modal-feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="modal-form-input">
           <label for="name">Ваше имя:</label>
           <input id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
@@ -392,10 +392,11 @@
           <label for="text">Текст письма:</label>
           <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
         </p>
+        <div class="button-wrapper">
+          <button class="button" type="submit">Отправить</button>
+        </div>
       </form>
-      <div class="button-wrapper">
-        <button class="button" type="submit">Отправить</button>
-      </div>
+
       <button class="modal-close" type="button">Закрыть</button>
     </section>
 
@@ -407,5 +408,7 @@
       </p>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
+
+    <script src="js/scripts.js"></script>
   </body>
 </html>
