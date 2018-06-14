@@ -1474,6 +1474,7 @@ header {
   font: inherit;
   font-size: 21px;
   line-height: 21px;
+  word-break: break-all;
 
   border: none;
   background-color: #ffffff;
@@ -1499,7 +1500,8 @@ header {
 
 .authorized-list {
   display: flex;
-
+  flex-wrap: wrap;
+  width: 300px;
   margin: 0;
   padding: 0;
   margin-left: 20px;
@@ -1531,7 +1533,7 @@ header {
   margin-right: 30px;
 }
 
-.authorized-list li:first-child::after {
+.authorized-list li::after {
   content: "";
 
   position: absolute;
@@ -1543,6 +1545,10 @@ header {
 
   background-color: #32425c;
   border-radius: 50%;
+}
+
+.authorized-list li:last-child::after {
+  display: none;
 }
 
 .authorized-list li:last-child {
