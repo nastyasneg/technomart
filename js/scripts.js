@@ -1,6 +1,32 @@
+/*** services slider ***/
+
+var serviceLinks = document.querySelectorAll(".toggle-item");
+var serviceSlides = document.querySelectorAll(".services-item");
+var j, h, k;
+
+for (i = 0; i < serviceLinks.length; ++i) {
+  serviceLinks[i].addEventListener("click", function (event) {
+    for (j = 0; j < serviceLinks.length; ++j) {
+      serviceLinks[j].classList.remove("toggle-item-current");
+    }
+    for (h = 0; h < serviceLinks.length; ++h) {
+      if (serviceLinks[h] == this) {
+        serviceLinks[h].classList.add("toggle-item-current");
+        for (k = 0; k < serviceSlides.length; ++k) {
+          serviceSlides[k].classList.remove("services-item-show");
+        }
+          serviceSlides[h].classList.add("services-item-show");
+      }
+    }
+	})
+}
+
+/*** cart ***/
+
 var cartLinks = document.querySelectorAll(".button-buy");
 var modalCart = document.querySelector(".modal-cart");
 var closeCart = modalCart.querySelector(".modal-close");
+var closeCartButton = modalCart.querySelector(".button-close");
 
 for (var i = 0; i < cartLinks.length; i++) {
 	cartLinks[i].addEventListener("click", function(event){
@@ -14,6 +40,11 @@ closeCart.addEventListener("click", function (event) {
   modalCart.classList.remove("modal-cart-show");
 });
 
+closeCartButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  modalCart.classList.remove("modal-cart-show");
+});
+
 window.addEventListener("keydown", function (event) {
   if (event.keyCode === 27) {
     event.preventDefault();
@@ -22,6 +53,8 @@ window.addEventListener("keydown", function (event) {
     }
   }
 });
+
+/*** map ***/
 
 var linkMap = document.querySelector(".map-link");
 var modalMap = document.querySelector(".modal-map");
@@ -44,6 +77,8 @@ window.addEventListener("keydown", function (event) {
     }
   }
 });
+
+/*** feedback ***/
 
 var linkFeedback = document.querySelector(".feedback-link");
 var modalFeedback = document.querySelector(".modal-feedback");

@@ -1039,7 +1039,13 @@ header {
   border-bottom: 1px solid #4d637b;
 }
 
-.toggle-item-current {
+.toggle-item:hover {
+  background-color: #293449;
+}
+
+.toggle-item-current,
+.toggle-item-current:hover,
+.toggle-item-current:active {
   width: 240px;
   padding: 15px 20px;
   box-sizing: border-box;
@@ -1051,10 +1057,6 @@ header {
 
   background-color: #ffffff;
   border-bottom: 1px solid #4d637b;
-}
-
-.toggle-item:hover {
-  background-color: #293449;
 }
 
 .services-slider {
@@ -1080,6 +1082,7 @@ header {
 .services-item {
   display: none;
   width: 700px;
+  height: 335px;
   padding-bottom: 100px;
   min-height: 285px;
   box-sizing: border-box;
@@ -2301,6 +2304,11 @@ header {
 .button-close:hover,
 .button-close:active {
   background-color: #ffffff;
+}
+
+.button-close:hover,
+.button-close:active {
+  box-shadow: 0 1px 5px 2px rgba(41, 52, 73, 0.3);
 }
 
 .modal-close {
