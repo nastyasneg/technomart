@@ -1,3 +1,36 @@
+/*** cart ***/
+
+var cartLinks = document.querySelectorAll(".button-buy");
+var modalCart = document.querySelector(".modal-cart");
+var closeCart = modalCart.querySelector(".modal-close");
+var closeCartButton = modalCart.querySelector(".button-close");
+
+for (var i = 0; i < cartLinks.length; i++) {
+	cartLinks[i].addEventListener("click", function(event){
+		event.preventDefault();
+		modalCart.classList.add("modal-cart-show");
+	});
+}
+
+closeCart.addEventListener("click", function (event) {
+  event.preventDefault();
+  modalCart.classList.remove("modal-cart-show");
+});
+
+closeCartButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  modalCart.classList.remove("modal-cart-show");
+});
+
+window.addEventListener("keydown", function (event) {
+  if (event.keyCode === 27) {
+    event.preventDefault();
+    if (modalCart.classList.contains("modal-cart-show")) {
+      modalCart.classList.remove("modal-cart-show");
+    }
+  }
+});
+
 /*** promo slider ***/
 
 var slideIndex = 1;
@@ -50,39 +83,6 @@ for (i = 0; i < serviceLinks.length; ++i) {
     }
 	})
 }
-
-/*** cart ***/
-
-var cartLinks = document.querySelectorAll(".button-buy");
-var modalCart = document.querySelector(".modal-cart");
-var closeCart = modalCart.querySelector(".modal-close");
-var closeCartButton = modalCart.querySelector(".button-close");
-
-for (var i = 0; i < cartLinks.length; i++) {
-	cartLinks[i].addEventListener("click", function(event){
-		event.preventDefault();
-		modalCart.classList.add("modal-cart-show");
-	});
-}
-
-closeCart.addEventListener("click", function (event) {
-  event.preventDefault();
-  modalCart.classList.remove("modal-cart-show");
-});
-
-closeCartButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  modalCart.classList.remove("modal-cart-show");
-});
-
-window.addEventListener("keydown", function (event) {
-  if (event.keyCode === 27) {
-    event.preventDefault();
-    if (modalCart.classList.contains("modal-cart-show")) {
-      modalCart.classList.remove("modal-cart-show");
-    }
-  }
-});
 
 /*** map ***/
 
